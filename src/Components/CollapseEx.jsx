@@ -13,8 +13,8 @@ function CollapseEx() {
                          bg="teal.500"
                          rounded="md"
                          shadow="md"
-                     mt="410px"
-                     w="900px"
+                         mt="410px"
+                         w="900px"
                     >
                          <Flex>
                               <Box w="200px">
