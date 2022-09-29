@@ -10,21 +10,35 @@ import ToolsIcon from "./Pages/ToolsIcon";
 import ProductsCard from "./Components/ProductsCard";
 import ProservCard from "./Pages/ProservCard";
 import CustomerSaying from "./Pages/CustomerSaying";
+import Course from "./Components/Courses/Course";
+import AirbnbCard from "./Components/Courses/CourseCard";
+import CourseSection from "./Components/Courses/CourseSection";
+import DetailsPage from "./Details/DetailsPage";
+import CourseAccordion from "./Components/Courses/LeftAcordian";
+import SkillBox from "./Details/SkillBox";
+import Paragraph from "./Details/Paragraph";
 
 function App() {
      return (
           <>
+               {" "}
                {/* <Test /> */}
-               <Header />
+               {/* <Header />
                <MainPageFirstCard />
                <WhyPluralsightCard />
                <ProductsCard />
-               <ProservCard />
-               {/* <Feature /> */}
-               <CustomerSaying />
-               <PluralSightOne />
-               <ReadyToGetStartedCard />
-               <ToolsIcon />
+               <ProservCard /> */}
+               {/* <CustomerSaying /> */}
+               {/* <PluralSightOne /> */}
+               {/* <ReadyToGetStartedCard /> */}
+               {/* <ToolsIcon /> */}
+               {/* <Course /> */}
+               {/* <CourseSection /> */}
+               <CourseAccordion />
+               {/* <AirbnbCard /> */}
+               {/* <DetailsPage /> */}
+               {/* <SkillBox /> */}
+               {/* <Paragraph /> */}
           </>
      );
 }
