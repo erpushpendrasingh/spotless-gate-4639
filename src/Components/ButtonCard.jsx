@@ -7,12 +7,15 @@ import {
      GridItem,
      Container,
      Spacer,
+     Breadcrumb,
+     BreadcrumbItem,
+     BreadcrumbLink,
 } from "@chakra-ui/react";
 
 function ButtonCard() {
      return (
           <>
-               <VStack maxW={900} border="1px solid red" margin="50px auto">
+               <VStack maxW={900} margin="50px auto">
                     <Container margin="50px auto" maxW="4xl" height="300px">
                          <Grid
                               templateColumns="repeat(5, 1fr)"
@@ -84,6 +87,7 @@ function ButtonCard() {
                               </GridItem>
                          </Grid>
                     </Container>
+                    
                </VStack>
           </>
      );

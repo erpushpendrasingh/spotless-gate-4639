@@ -1,0 +1,14 @@
+.active {
+     text-decoration: none;
+     color: white;
+     border-bottom: 10px solid #F04840;
+     font-size: 25px;
+     font-weight: lighter;
+}
+
+.default {
+     text-decoration: none;
+     color: white;
+     font-size: 25px;
+     font-weight: lighter;
+}

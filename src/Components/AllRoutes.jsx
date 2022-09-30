@@ -1,18 +1,19 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import ForIndividuals from "./ForIndividuals";
-import Products from "./Products";
-import Resources from "./Resources";
-import Solutions from "./Solutions";
-
+import Pluralsight from "./Home/Pluralsight";
+import Skills from "./Home/Skills";
+import Flow from "./Home/Flow";
+import Blog from "./Home/Blog";
+import SignIn from "./Home/SignIn";
 const AllRoutes = () => {
      return (
           <>
                <Routes>
-                    <Route path="Products" element={<Products />}></Route>
-                    <Route path="Products" element={<Solutions />}></Route>
-                    <Route path="Products" element={<Resources />}></Route>
-                    <Route path="Products" element={<ForIndividuals />}></Route>
+                    <Route path="/" element={<Pluralsight />}></Route>
+                    <Route path="/skills" element={<Skills />}></Route>
+                    <Route path="/flow" element={<Flow />}></Route>
+                    <Route path="/blog" element={<Blog />}></Route>
+                    <Route path="/signin" element={<SignIn />}></Route>
                </Routes>
           </>
      );
