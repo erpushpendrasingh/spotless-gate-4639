@@ -14,13 +14,17 @@ function Feature({ url, desc, ...rest }) {
           <Box
                margin={"100px auto"}
                w="700px"
-               bg={"black"}
-               borderLeft={"5px solid green"}
+               // bg={"black"}
+               backgroundImage={
+                    "https://www.pluralsight.com/etc.clientlibs/pluralsight/clientlibs/clientlib-main/resources/images/paths-v2/paths-skill-iq-bkgd.png"
+               }
+               backgroundRepeat="no-repeat"
+               backgroundSize={"cover"}
+               borderLeft={"8px solid green"}
                {...rest}
           >
                {/* <Heading fontSize="xl">{title}</Heading> */}
                <Box
-                    border="1px solid red"
                     display={"flex"}
                     flexDirection="column"
                     gap={5}
@@ -35,7 +39,12 @@ function Feature({ url, desc, ...rest }) {
                     <Text width={450} fontSize={25} color={"white"}>
                          Know exactly where everyone on your team stands with
                     </Text>
-                    <Button w="400px" h="70px" color={"white"} variant={"outline"}>
+                    <Button
+                         w="400px"
+                         h="70px"
+                         color={"#ccc"}
+                         variant={"outline"}
+                    >
                          ASSESSMENTS AND ANALYTICS
                     </Button>
                </Box>

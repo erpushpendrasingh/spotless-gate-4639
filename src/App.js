@@ -1,8 +1,6 @@
 import "./App.css";
-import PluralSightOne from "./Pages/PluralSightOne";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import Test from "./Components/ButtonCard";
 import MainPageFirstCard from "./Components/MainPageFirstCard";
 import WhyPluralsightCard from "./Components/WhyPluralsightCard";
 import ReadyToGetStartedCard from "./Pages/ReadyToGetStartedCard";
@@ -17,28 +15,33 @@ import DetailsPage from "./Details/DetailsPage";
 import CourseAccordion from "./Components/Courses/LeftAcordian";
 import SkillBox from "./Details/SkillBox";
 import Paragraph from "./Details/Paragraph";
+import AboutTheAuthor from "./Details/AboutTheAuthor";
+import ReadyToUpskill from "./Details/ReadyToUpskill";
+import Navbar from "./Components/Home/Navbar";
+import Faq from "./Components/Home/Faq";
+import Home from "./Pages/Home";
 
 function App() {
      return (
           <>
                {" "}
                {/* <Test /> */}
-               {/* <Header />
-               <MainPageFirstCard />
-               <WhyPluralsightCard />
-               <ProductsCard />
-               <ProservCard /> */}
-               {/* <CustomerSaying /> */}
+               <Navbar />
+               <Header />
+               <Home />
+               <Footer />
                {/* <PluralSightOne /> */}
                {/* <ReadyToGetStartedCard /> */}
-               {/* <ToolsIcon /> */}
                {/* <Course /> */}
-               {/* <CourseSection /> */}
+               {/* <CourseSection />
                <CourseAccordion />
-               {/* <AirbnbCard /> */}
-               {/* <DetailsPage /> */}
-               {/* <SkillBox /> */}
-               {/* <Paragraph /> */}
+               <AirbnbCard />
+               <DetailsPage />
+               <SkillBox />
+               <Paragraph />
+               <AboutTheAuthor />
+               <ReadyToUpskill />
+               <Faq /> */}
           </>
      );
 }

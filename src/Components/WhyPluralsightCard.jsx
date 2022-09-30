@@ -16,15 +16,17 @@ const WhyPluralsightCard = () => {
           <>
                <VStack
                     bg="#FFFFFF"
-                    border="1px solid red"
-                    w="80%"
-                    margin="100px auto"
+                    w="100%"
+                    height={"90vh"}
+                    margin="150px auto"
                >
                     <Grid templateColumns="repeat(2,1fr)" alignItems="center">
                          <GridItem>
-                              <Box w="600px">
-                                   <Heading>Why Pluralsight?</Heading>
-                                   <Text>
+                              <Box w="800px">
+                                   <Heading mt={20} fontSize={70}>
+                                        Why Pluralsight?
+                                   </Heading>
+                                   <Text mt={20} height={400} fontSize={25}>
                                         Whether you’re an individual looking to
                                         learn Python to advance your career or
                                         an enterprise team looking to cut cycle
@@ -39,16 +41,15 @@ const WhyPluralsightCard = () => {
                                    </Text>
                                    <Button
                                         bg="#EF4143"
-                                        h="50px"
-                                        w="200px"
-                                        mt="40px"
+                                        h="70px"
+                                        w="270px"
                                    >
                                         See our solutions
                                    </Button>
                               </Box>
                          </GridItem>
                          <GridItem>
-                              <Image w="590px" src={why} />
+                              <Image w="700px" h="900" src={why} />
                          </GridItem>
                     </Grid>
                </VStack>

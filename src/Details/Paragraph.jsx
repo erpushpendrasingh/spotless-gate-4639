@@ -1,4 +1,10 @@
-import { ArrowForwardIcon, CloseIcon, EmailIcon } from "@chakra-ui/icons";
+import {
+     ArrowForwardIcon,
+     CloseIcon,
+     EmailIcon,
+     LockIcon,
+     StarIcon,
+} from "@chakra-ui/icons";
 import {
      Container,
      Text,
@@ -16,9 +22,13 @@ import {
      Radio,
      Checkbox,
      RadioGroup,
+     Breadcrumb,
+     BreadcrumbItem,
+     BreadcrumbLink,
 } from "@chakra-ui/react";
 import "../App.css";
 import React from "react";
+import { FaPlay } from "react-icons/fa";
 
 const Paragraph = () => {
      const property = {
@@ -49,27 +59,63 @@ const Paragraph = () => {
                               certifications.`,
      };
      return (
-          //   <HStack border={"1px solid red"} maxW="100%">
           <VStack>
-               <Container bg={"black"} border={"1px solid red"} maxW="100%">
+               <Container bg={"#181818"} maxW="100%">
+                    <Box mt={10} fontSize={20} color={"#ccc"}>
+                         <Breadcrumb>
+                              <BreadcrumbItem>
+                                   <BreadcrumbLink href="#">
+                                        Home
+                                   </BreadcrumbLink>
+                              </BreadcrumbItem>
+
+                              <BreadcrumbItem>
+                                   <BreadcrumbLink href="#">
+                                        Docs
+                                   </BreadcrumbLink>
+                              </BreadcrumbItem>
+
+                              <BreadcrumbItem isCurrentPage>
+                                   <BreadcrumbLink href="#">
+                                        Breadcrumb
+                                   </BreadcrumbLink>
+                              </BreadcrumbItem>
+                         </Breadcrumb>
+                    </Box>
                     <Container
+                         mt={"60px"}
                          maxW="100%"
-                         bg="black.400"
+                         bg="#181818"
                          color="#262626"
                          font-family="Source Sans Pro"
                     >
-                         <Heading color="white">{property.title}</Heading>
-                         <Text color={"white"} fontSize={20}>
-                              {property.author}
+                         <Heading fontSize={"6xl"} color="white">
+                              {property.title}
+                         </Heading>
+                         <Text mt={10} color={"white"} fontSize={20}>
+                              <StarIcon color={"gold"} />
+                              <StarIcon color={"gold"} />
+                              <StarIcon color={"gold"} />
+                              <StarIcon color={"gold"} />
+                              <StarIcon color={"gold"} /> {property.author}
                          </Text>
-                         <Text fontSize={20} fontWeight={"700"} color={"#fff"}>
+                         <Text
+                              mt={10}
+                              fontSize={20}
+                              fontWeight={"700"}
+                              color={"#fff"}
+                         >
                               {property.management}
                          </Text>
-                         <Stack direction="row" spacing={4}>
+                         <Stack mt={10} direction="row" spacing={4}>
                               <Button
-                                   leftIcon={<EmailIcon />}
-                                   colorScheme="teal"
+                                   leftIcon={<FaPlay />}
+                                   colorScheme="black"
                                    variant="solid"
+                                   width={350}
+                                   height={"80px"}
+                                   border={"1px solid #ccc"}
+                                   fontSize="20px"
                               >
                                    PREVIEW THIS COURSE
                               </Button>
@@ -81,6 +127,7 @@ const Paragraph = () => {
                          </Stack>
                          <Stack>
                               <Box
+                                   mt={10}
                                    fontSize={20}
                                    fontWeight={"bold"}
                                    color={"#fff"}
@@ -89,28 +136,28 @@ const Paragraph = () => {
                               </Box>
                          </Stack>
                          <Stack>
-                              <VStack bg="#000" width={500} textColor="#fff">
+                              <VStack bg="#000" width={"100%"} textColor="#fff">
                                    <Accordion
                                         allowMultiple
-                                        w="70%"
+                                        w="100%"
                                         mt="50px"
-                                        defaultIndex={[0, 1, 2]}
+                                        // defaultIndex={[0, 1, 2]}
                                    >
                                         <AccordionItem w="100%">
-                                             <h2>
+                                             <h1>
                                                   <AccordionButton width="100%">
                                                        <Box
-                                                            width={500}
-                                                            fontWeight={"bold"}
-                                                            fontSize="22px"
+                                                            fontSize="25px"
                                                             flex="1"
                                                             textAlign="left"
                                                        >
-                                                            Ways to learn
+                                                            Course Overview{" "}
+                                                            <br />
+                                                            1m
                                                        </Box>
                                                        <AccordionIcon />
                                                   </AccordionButton>
-                                             </h2>
+                                             </h1>
                                              <Box
                                                   display="flex"
                                                   flexDirection="row"
@@ -121,68 +168,34 @@ const Paragraph = () => {
                                                   >
                                                        <Stack
                                                             fontWeight={"bold"}
-                                                            fontSize={35}
+                                                            fontSize={20}
                                                        >
-                                                            <RadioGroup
-                                                                 w="200px"
-                                                                 //   onChange={
-                                                                 //        setValue
-                                                                 //   }
-                                                                 value={"1"}
-                                                            >
-                                                                 <Radio
-                                                                      size="lg"
-                                                                      width={
-                                                                           500
-                                                                      }
-                                                                      value="1"
-                                                                      colorScheme="teal"
-                                                                 >
-                                                                      All
-                                                                 </Radio>
-                                                                 <Radio
-                                                                      size="lg"
-                                                                      value="10"
-                                                                      colorScheme="teal"
-                                                                 >
-                                                                      Core
-                                                                      courses
-                                                                 </Radio>
-                                                                 <Radio
-                                                                      size="lg"
-                                                                      value="2"
-                                                                      colorScheme="teal"
-                                                                 >
-                                                                      Expended
-                                                                      courses
-                                                                 </Radio>
-                                                                 <Radio
-                                                                      size="lg"
-                                                                      value="3"
-                                                                      colorScheme="teal"
-                                                                 >
-                                                                      Labs
-                                                                 </Radio>
-                                                            </RadioGroup>
+                                                            <Box w={"500px"}>
+                                                                 <Text>
+                                                                      <li>
+                                                                           Course
+                                                                           Overview
+                                                                           1m
+                                                                      </li>
+                                                                 </Text>
+                                                            </Box>
                                                        </Stack>
                                                   </AccordionPanel>
                                              </Box>
                                         </AccordionItem>
-                                        <AccordionItem w="100%">
+                                        <AccordionItem mt={50} w="100%">
                                              <h2>
-                                                  <AccordionButton
-                                                       //    width={400}
-                                                       fontWeight={"bold"}
-                                                       width="100%"
-                                                  >
+                                                  <AccordionButton width="100%">
                                                        <Box
                                                             flex="1"
                                                             textAlign="left"
                                                             width={500}
-                                                            fontWeight={"bold"}
-                                                            fontSize="22px"
+                                                            fontSize="25px"
                                                        >
-                                                            Skill level
+                                                            Risk Frameworks -
+                                                            ISO27005, 31000,
+                                                            NIST, HTRA <br />{" "}
+                                                            45mins
                                                        </Box>
                                                        <AccordionIcon />
                                                   </AccordionButton>
@@ -193,104 +206,468 @@ const Paragraph = () => {
                                              >
                                                   <AccordionPanel
                                                        pb={4}
-                                                       w="50%"
+                                                       w="70%"
                                                        fontWeight={"bold"}
                                                        fontSize={25}
                                                   >
-                                                       {/* <Radio
-                                        size="lg"
-                                        name="1"
-                                        colorScheme="teal"
-                                        defaultChecked
-                                   >
-                                       Advanced
-                                   </Radio> */}
-                                                       <Checkbox isValid>
-                                                            Advanced
-                                                       </Checkbox>
-                                                       <Checkbox isValid>
-                                                            Advanced
-                                                       </Checkbox>
-                                                       <Checkbox isValid>
-                                                            Advanced
-                                                       </Checkbox>
+                                                       <Box
+                                                            flex="1"
+                                                            textAlign="left"
+                                                            width={600}
+                                                            fontWeight={
+                                                                 "normal"
+                                                            }
+                                                            // fontSize="22px"
+                                                            fontSize="20px"
+                                                            border="1px solid red"
+                                                       >
+                                                            <Text
+                                                                 mt={5}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      {`Risk
+                                                                      Frameworks
+                                                                      - ISO/IEC
+                                                                      27005,
+                                                                      31000,
+                                                                      NIST, HTRA
+                                                                      7m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={"1px"}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      {
+                                                                           " Risk Management Overview 9m "
+                                                                      }
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={"1px"}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      {
+                                                                           " Risk Management Terminology 7m "
+                                                                      }
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={"1px"}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      {
+                                                                           "  Risk and Governance 9m"
+                                                                      }
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={"1px"}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      {
+                                                                           "  Risk Management Process Part 1  6m"
+                                                                      }
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={"1px"}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      {`Risk
+                                                                      Management
+                                                                      Process
+                                                                      Part 2 7m`}
+                                                                 </li>
+                                                            </Text>
+                                                       </Box>
                                                   </AccordionPanel>
                                              </Box>
                                         </AccordionItem>
-                                        <AccordionItem w="100%">
+                                        <AccordionItem mt={"50px"} w="100%">
                                              <h2>
                                                   <AccordionButton
                                                        fontWeight={"bold"}
                                                        width="100%"
                                                   >
                                                        <Box
-                                                            fontWeight={"bold"}
-                                                            fontSize="22px"
+                                                            fontWeight={
+                                                                 "normal"
+                                                            }
+                                                            fontSize="25"
                                                             flex="1"
                                                             textAlign="left"
                                                        >
-                                                            Subject
+                                                            Framing Risk <br />{" "}
+                                                            11mins
                                                        </Box>
                                                        <AccordionIcon />
                                                   </AccordionButton>
                                              </h2>
                                              <Box
                                                   display="flex"
-                                                  flexDirection="column"
+                                                  flexDirection="row"
                                              >
                                                   <AccordionPanel
                                                        pb={4}
-                                                       w="100%"
+                                                       w="10%"
                                                        fontSize={25}
                                                        fontWeight={"bold"}
                                                   >
-                                                       <Checkbox
-                                                            width={500}
-                                                            isValid
+                                                       <Box
+                                                            flex="1"
+                                                            textAlign="left"
+                                                            width={600}
+                                                            fontWeight={
+                                                                 "normal"
+                                                            }
+                                                            // fontSize="22px"
+                                                            fontSize="20px"
+                                                            border="1px solid red"
                                                        >
-                                                            Architecture &
-                                                            construction
-                                                       </Checkbox>
-                                                       <Checkbox isValid>
-                                                            Business
-                                                            professional
-                                                       </Checkbox>
-                                                       <Checkbox isValid>
-                                                            Creative
-                                                            professional
-                                                       </Checkbox>
-                                                       <Checkbox isValid>
-                                                            Data professional
-                                                       </Checkbox>
-
-                                                       <Checkbox isValid>
-                                                            Manufacturing &
-                                                            design
-                                                       </Checkbox>
-                                                       <Checkbox isValid>
-                                                            Information & cyber
-                                                            security
-                                                       </Checkbox>
-                                                       <Checkbox isValid>
-                                                            Software development
-                                                       </Checkbox>
-                                                       <Checkbox isValid>
-                                                            Web development
-                                                       </Checkbox>
+                                                            <Text
+                                                                 mt={5}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`  Framing Risk Part 1 5m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`   Framing Risk Part 2 6m`}
+                                                                 </li>
+                                                            </Text>
+                                                       </Box>
+                                                  </AccordionPanel>
+                                             </Box>
+                                        </AccordionItem>
+                                        <AccordionItem mt={"50px"} w="100%">
+                                             <h2>
+                                                  <AccordionButton
+                                                       fontWeight={"bold"}
+                                                       width="100%"
+                                                  >
+                                                       <Box
+                                                            fontWeight={
+                                                                 "normal"
+                                                            }
+                                                            fontSize="25"
+                                                            flex="1"
+                                                            textAlign="left"
+                                                       >
+                                                            Assessing Risk{" "}
+                                                            <br /> 45mins
+                                                       </Box>
+                                                       <AccordionIcon />
+                                                  </AccordionButton>
+                                             </h2>
+                                             <Box
+                                                  display="flex"
+                                                  flexDirection="row"
+                                             >
+                                                  <AccordionPanel
+                                                       pb={4}
+                                                       w="10%"
+                                                       fontSize={25}
+                                                       fontWeight={"bold"}
+                                                  >
+                                                       <Box
+                                                            flex="1"
+                                                            textAlign="left"
+                                                            width={600}
+                                                            fontWeight={
+                                                                 "normal"
+                                                            }
+                                                            // fontSize="22px"
+                                                            fontSize="20px"
+                                                            border="1px solid red"
+                                                       >
+                                                            <Text
+                                                                 mt={5}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`Assessing
+                                                                                Risk
+                                                                                9m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`  Threat Modeling 10m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`  Risk Assessment Process Part 1 7m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`  Risk Assessment Process Part 2 6m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`  Risk Assessment Process Part 3 9m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`Risk Assessment Results 4m`}
+                                                                 </li>
+                                                            </Text>
+                                                       </Box>
+                                                  </AccordionPanel>
+                                             </Box>
+                                        </AccordionItem>
+                                        <AccordionItem mt={"50px"} w="100%">
+                                             <h2>
+                                                  <AccordionButton
+                                                       fontWeight={"bold"}
+                                                       width="100%"
+                                                  >
+                                                       <Box
+                                                            fontWeight={
+                                                                 "normal"
+                                                            }
+                                                            fontSize="25"
+                                                            flex="1"
+                                                            textAlign="left"
+                                                       >
+                                                            Mitigating Risk{" "}
+                                                            <br /> 31mins
+                                                       </Box>
+                                                       <AccordionIcon />
+                                                  </AccordionButton>
+                                             </h2>
+                                             <Box
+                                                  display="flex"
+                                                  flexDirection="row"
+                                             >
+                                                  <AccordionPanel
+                                                       pb={4}
+                                                       w="10%"
+                                                       fontSize={25}
+                                                       fontWeight={"bold"}
+                                                  >
+                                                       <Box
+                                                            flex="1"
+                                                            textAlign="left"
+                                                            width={600}
+                                                            fontWeight={
+                                                                 "normal"
+                                                            }
+                                                            // fontSize="22px"
+                                                            fontSize="20px"
+                                                            border="1px solid red"
+                                                       >
+                                                            <Text
+                                                                 mt={5}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`  Mitigating Risk Part 1 7m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`    Mitigating Risk Part 2 7m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`   Mitigating Risk Part 3 10m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`   Mitigating Risk Part 4 7m`}
+                                                                 </li>
+                                                            </Text>
+                                                       </Box>
+                                                  </AccordionPanel>
+                                             </Box>
+                                        </AccordionItem>
+                                        <AccordionItem mt={"50px"} w="100%">
+                                             <h2>
+                                                  <AccordionButton
+                                                       fontWeight={"bold"}
+                                                       width="100%"
+                                                  >
+                                                       <Box
+                                                            fontWeight={
+                                                                 "normal"
+                                                            }
+                                                            fontSize="25"
+                                                            flex="1"
+                                                            textAlign="left"
+                                                       >
+                                                            Monitoring Risk{" "}
+                                                            <br /> 19mins
+                                                       </Box>
+                                                       <AccordionIcon />
+                                                  </AccordionButton>
+                                             </h2>
+                                             <Box
+                                                  display="flex"
+                                                  flexDirection="row"
+                                             >
+                                                  <AccordionPanel
+                                                       pb={4}
+                                                       w="10%"
+                                                       fontSize={25}
+                                                       fontWeight={"bold"}
+                                                  >
+                                                       <Box
+                                                            flex="1"
+                                                            textAlign="left"
+                                                            width={600}
+                                                            fontWeight={
+                                                                 "normal"
+                                                            }
+                                                            // fontSize="22px"
+                                                            fontSize="20px"
+                                                            border="1px solid red"
+                                                       >
+                                                            <Text
+                                                                 mt={5}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`    Monitoring Risk 6m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`      Risk Monitoring Process Part 1 6m`}
+                                                                 </li>
+                                                            </Text>
+                                                            <Text
+                                                                 mt={1}
+                                                                 p="10px"
+                                                            >
+                                                                 <li>
+                                                                      <LockIcon
+                                                                           color={
+                                                                                "goldenrod"
+                                                                           }
+                                                                      />{" "}
+                                                                      {`    Risk Monitoring Process Part 2 7m`}
+                                                                 </li>
+                                                            </Text>
+                                                       </Box>
                                                   </AccordionPanel>
                                              </Box>
                                         </AccordionItem>
                                    </Accordion>
-                                   <Button
-                                        mt={20}
-                                        bg="black"
-                                        colorScheme={"blackAlpha"}
-                                        variant={"solid"}
-                                        w={"100%"}
-                                        size="lg"
-                                   >
-                                        <CloseIcon mr={5} /> Clear filter
-                                   </Button>
                               </VStack>
                          </Stack>
                     </Container>
