@@ -1,18 +1,8 @@
 import { StarIcon } from "@chakra-ui/icons";
-import {
-     Box,
-     Button,
-     Heading,
-     Text,
-     VStack,
-     Image,
-     Breadcrumb,
-     BreadcrumbItem,
-     BreadcrumbLink,
-} from "@chakra-ui/react";
+import { Box, Button, Heading, Text, VStack, Image } from "@chakra-ui/react";
 import React from "react";
-import { MdOutlineWatchLater, MdSignalCellularAlt } from "react-icons/md";
-import { FcBullish, IconName } from "react-icons/fc";
+import { FcBullish } from "react-icons/fc";
+import SkillBox from "./SkillBox";
 const DetailsPage = () => {
      const property = {
           imageUrl: "https://bit.ly/2Z4KKcF",
@@ -27,19 +17,18 @@ const DetailsPage = () => {
           time: new Date().getHours(),
           min: new Date().getMinutes(),
           date: new Date().toString(),
-          // month: new Date().getMonth(),
      };
      return (
           <VStack
                display="flex"
-               // border="1px solid red"
                w="550px"
-               m="50px auto"
+               m="0px auto"
                alignItems={"left"}
                p="10"
                bg={"#181818"}
+               h="auto"
           >
-               <Box pz="2" m={"auto"} bg="#222222" color={"white"}>
+               <Box p="6" m={"0px auto"} bg="#222222" color={"white"}>
                     <Heading textAlign={"left"} mt={5}>
                          Try for free
                     </Heading>
@@ -57,11 +46,11 @@ const DetailsPage = () => {
                     >
                          GET STARTED
                     </Button>
-                    <Text pb={10} mt={5} textAlign={"center"}>
+                    <Text mt={5} textAlign={"justify"}>
                          ₹ 1,499 per month after 10 day trial
                     </Text>
                </Box>
-               <Box p="1" m={"auto"} bg="#222222" color={"white"}>
+               <Box p="6" m={"0px auto"} bg="#222222" color={"white"}>
                     <Text fontWeight={"bold"} mt="2">
                          Your 10 day Standard free trial includes
                     </Text>
@@ -69,13 +58,13 @@ const DetailsPage = () => {
                          <Image src="https://i.postimg.cc/66cWwsKX/courses-icon.png" />
                          <Text fontWeight={"bold"}>Expert-led courses</Text>
                     </Box>
-                    <Text pb={10} mt={5} textAlign={"center"}>
+                    <Text mt={5} textAlign={"justify"}>
                          Keep up with the pace of change with thousands of
                          expert-led, in-depth courses.
                     </Text>
                </Box>
-               <Box pz="2" m={"auto"} bg="#222222" color={"white"}>
-                    <Text fontSize={25} textAlign={"left"} mt={5}>
+               <Box p={"6"} m={"0px auto"} bg="#222222" color={"white"}>
+                    <Text fontSize={25} textAlign={"left"} mt={2}>
                          For teams
                     </Text>
                     <Text mt="2">
@@ -84,18 +73,13 @@ const DetailsPage = () => {
                     </Text>
                </Box>
                <Box
-                    m="100px auto"
                     maxW="600px"
-                    borderWidth="1px"
-                    borderRadius="lg"
-                    overflow="hidden"
                     fontSize={25}
-                    bg="black"
+                    bg="#181818"
                     h="300px"
-                    p="3"
                     color={"white"}
                >
-                    <Box p="6">
+                    <Box mt={"10"}>
                          <Box
                               mt="1"
                               fontWeight="semibold"
@@ -177,31 +161,11 @@ const DetailsPage = () => {
                          </Box>
                     </Box>
                </Box>
+               <Box>
+                    <SkillBox />
+               </Box>
           </VStack>
      );
 };
 
 export default DetailsPage;
-//  <Box display="flex" mt="2" gap={5} alignItems="center">
-//       <Box
-//            display="flex"
-//            alignItems="center"
-//            justifyContent={"space-between"}
-//            w="60px"
-//            color="#ccc"
-//            fontSize="sm"
-//       >
-//            {property.time}h{property.min}m <MdOutlineWatchLater />
-//       </Box>
-//       <Box
-//            width={"100px"}
-//            display="flex"
-//            justifyContent={"space-between"}
-//            alignItems={"center"}
-//            color="#ccc"
-//            fontSize="sm"
-//       >
-//            {property.im} <MdSignalCellularAlt />
-//       </Box>
-//
-//  </Box>;

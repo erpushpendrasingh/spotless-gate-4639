@@ -59,7 +59,7 @@ const Header = () => {
      return (
           <>
                <HStack bg="#2B2B2B" h="80px" margin=" auto" w="100%" px="50px">
-                    <Box width="100%">
+                    <Box width="100%" border={"1px solid red"}>
                          <Flex
                               alignItems="center"
                               justifyContent="space-between"
@@ -74,6 +74,7 @@ const Header = () => {
                                    colorScheme="black"
                                    w="150px"
                                    h="60px"
+                                   border={"1px solid red"}
                                    onClick={() => setOpenTabOneChange()}
                               >
                                    Products
@@ -93,6 +94,7 @@ const Header = () => {
                                         h="45vh"
                                         color={"black"}
                                         zIndex="1000"
+                                        border={"1px solid red"}
                                    >
                                         <Flex
                                              flexDirection="row"
@@ -100,7 +102,11 @@ const Header = () => {
                                              justifyContent="space-around"
                                              mt="20px"
                                         >
-                                             <Box w="250px" h="250px">
+                                             <Box
+                                                  w="300px"
+                                                  h="250px"
+                                                  border={"1px solid red"}
+                                             >
                                                   <Box
                                                        borderRight="5px solid #FFFFFF"
                                                        w="250px"
@@ -113,6 +119,9 @@ const Header = () => {
                                                             h="80px"
                                                             borderBottom={
                                                                  "2px solid #ccc"
+                                                            }
+                                                            border={
+                                                                 "1px solid red"
                                                             }
                                                        >
                                                             <Box>
@@ -145,7 +154,9 @@ const Header = () => {
                                                             gap={2}
                                                             mt={10}
                                                        >
-                                                            <Link>Courses</Link>
+                                                            <Link to="/skills">
+                                                                 Courses
+                                                            </Link>
                                                             <Link>
                                                                  {
                                                                       " For individuals"
@@ -960,7 +971,7 @@ const Header = () => {
                                                                  src="https://www.pluralsight.com/content/dam/ps-nav-assets/feature-images/feature-state-of-upskilling.webp"
                                                             />
                                                        </Box>
-                                                     
+
                                                        <Heading
                                                             fontSize={18}
                                                             fontWeight="bold"
@@ -977,7 +988,6 @@ const Header = () => {
                                                             pool with the 2022
                                                             State of Upskilling
                                                        </Text>
-                                                      
                                                   </Box>
                                              </Box>
                                         </Flex>

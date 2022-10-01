@@ -1,22 +1,18 @@
-import {
-     Box,
-     Button,
-     Flex,
-     Heading,
-     HStack,
-     Text,
-     Image,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Text, Image } from "@chakra-ui/react";
 
 function Feature({ title, desc, btnText, btnText_I, imgl, ...rest }) {
      return (
           <Box
-               m="50px auto"
+               m="0px auto"
+               zIndex={"1000"}
                p={10}
                h="290px"
                w="750px"
-               shadow="md"
+               boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
                borderWidth="1px"
+               position={"absolute"}
+               bg="white"
+               left={"30%"}
                {...rest}
           >
                <Box>
@@ -56,5 +52,4 @@ function StackEx() {
      );
 }
 
-// render(<StackEx />);
 export default StackEx;

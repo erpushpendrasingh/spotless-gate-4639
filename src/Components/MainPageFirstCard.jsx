@@ -19,8 +19,11 @@ import fedexlogo from "./fedexlogo.png";
 const MainPageFirstCard = () => {
      return (
           <>
-               <VStack height={"120vh"} bg="#B6284E" border="1px solid red">
-                    <Box margin=" auto" bg="#3B121D" w="90%" h="900px">
+               <VStack
+                    height={"120vh"}
+                    bg="linear-gradient(30deg, rgba(126,6,78,0.75) 0%, rgba(32,32,32,1) 50%, rgba(234,42,94,1) 90%)"
+               >
+                    <Box margin=" auto" w="90%" h="900px">
                          <VStack>
                               <Heading mt={50} fontSize="40px" color="white">
                                    Pluralsight empowers you to build tech

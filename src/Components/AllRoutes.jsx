@@ -1,19 +1,25 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Pluralsight from "./Home/Pluralsight";
-import Skills from "./Home/Skills";
 import Flow from "./Home/Flow";
-import Blog from "./Home/Blog";
-import SignIn from "./Home/SignIn";
+import Home from "../Pages/Home";
+import CourseLayout from "./Courses/CourseLayout";
+import Login from "./Login/Login";
+import { Heading } from "@chakra-ui/react";
+import DetailsPageLayout from "../Details/DetailsPageLayout";
 const AllRoutes = () => {
      return (
           <>
+               
                <Routes>
-                    <Route path="/" element={<Pluralsight />}></Route>
-                    <Route path="/skills" element={<Skills />}></Route>
+                    <Route exact path="/" element={<Home />}></Route>
+                    <Route path="/skills" element={<CourseLayout />}></Route>
                     <Route path="/flow" element={<Flow />}></Route>
-                    <Route path="/blog" element={<Blog />}></Route>
-                    <Route path="/signin" element={<SignIn />}></Route>
+                    <Route path="/login" element={<Login />}></Route>
+                    <Route
+                         path="/detailsPage"
+                         element={<DetailsPageLayout />}
+                    ></Route>
+                    <Route path="*" element={<Heading>Error</Heading>}></Route>
                </Routes>
           </>
      );

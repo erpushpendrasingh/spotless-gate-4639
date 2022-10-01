@@ -7,15 +7,7 @@ import {
 import {
      Box,
      Button,
-     ButtonGroup,
-     Flex,
-     Heading,
      Input,
-     Spacer,
-     Text,
-     Tag,
-     TagLabel,
-     Stack,
      VStack,
      HStack,
      FormControl,
@@ -25,17 +17,29 @@ import {
      MenuButton,
      Menu,
      MenuList,
-     MenuItem,
+     Text,
+     MenuOptionGroup,
+     MenuItemOption,
+     MenuDivider,
+     Heading,
 } from "@chakra-ui/react";
 import React from "react";
+import { FaSort } from "react-icons/fa";
 
-const CourseSection = () => {
+const CourseSection = ({ setOrderby, searchItems }) => {
      return (
           <VStack bg={"blackAlpha.900"}>
-               {/* <Flex w="70%" margin={"auto"} alignItems="center" gap="5"> */}
-               <Box py="100">
-                    <VStack gap={2}>
-                         <FormControl alignItems={"center"}>
+               <Box w="90%" py="100">
+                    <VStack
+                         display={"flex"}
+                         alignItems="center"
+                         // flexDirection={"row"}
+                    >
+                         <FormControl
+                              display={"flex"}
+                              alignItems={"center"}
+                              w="90%"
+                         >
                               <FormLabel
                                    fontSize={20}
                                    fontWeight={"bold"}
@@ -44,73 +48,123 @@ const CourseSection = () => {
                                    Search
                               </FormLabel>
                               <Input
+                                   color={"white"}
+                                   fontSize="26px"
+                                   bg="#363638"
                                    placeholder="Search"
-                                   h="50px"
-                                   w="900px"
-                                   borderRadius={"none"}
+                                   h="80px"
+                                   w="85%"
+                                   border={"none"}
                                    type="email"
+                                   borderRadius={"none"}
+                                   onChange={(e) => {
+                                        searchItems(e.target.value);
+                                   }}
                               />
                               <IconButton
-                                   h="53px"
+                                   h="80px"
                                    w="50px"
                                    borderRadius={"none"}
                                    aria-label="Search database"
                                    icon={<SearchIcon />}
+                                   bg="#363638"
+                                   color="white"
+                                   fontSize={28}
+                                   marginBottom="5px"
+                                   onClick={(e) => searchItems(e)}
                               />
 
-                              {/* <Button
-                                   h={"55"}
-                                   colorScheme="teal"
-                                   variant="outline"
-                                   py={5}
+                              <Menu
+                                   border={"1px solid red"}
+                                   closeOnSelect={false}
                               >
-                                   Sort by <UpDownIcon />
-                              </Button> */}
-                              <Menu>
-                                   {({ isOpen }) => (
-                                        <>
-                                             <MenuButton
-                                                  h={50}
-                                                  bg={"black"}
-                                                  isActive={isOpen}
-                                                  as={Button}
-                                                  color="red"
-                                                  border={"1px solid red"}
-                                                  rightIcon={
-                                                       <ChevronDownIcon />
+                                   <MenuButton
+                                        display={"flex"}
+                                        height="80px"
+                                        as={Button}
+                                        w={"190px"}
+                                        alignItems="center"
+                                        bg="black"
+                                        color={"white"}
+                                        margin="0px 25px"
+                                        variant="outline"
+                                        type="radio"
+                                   >
+                                        <Text as={Heading}>
+                                             {" "}
+                                             {" Sort by "}{" "}
+                                        </Text>
+                                   </MenuButton>
+                                   <MenuList
+                                        minWidth="240px"
+                                        bg={"#222222"}
+                                        color="#fff"
+                                   >
+                                        <MenuOptionGroup>
+                                             <MenuItemOption
+                                                  value="asc"
+                                                  onClick={() =>
+                                                       setOrderby("asc")
                                                   }
                                              >
-                                                  {isOpen ? "Close" : "Sort by"}
-                                             </MenuButton>
-                                             <MenuList>
-                                                  <MenuItem>
-                                                       Highest rated
-                                                  </MenuItem>
-                                                  <MenuItem
-                                                       onClick={() =>
-                                                            alert("Kagebunshin")
-                                                       }
-                                                  >
-                                                       Newest
-                                                  </MenuItem>
-                                                  <MenuItem
-                                                       onClick={() =>
-                                                            alert("Kagebunshin")
-                                                       }
-                                                  >
-                                                       Course A→Z
-                                                  </MenuItem>
-                                                  <MenuItem
-                                                       onClick={() =>
-                                                            alert("Kagebunshin")
-                                                       }
-                                                  >
-                                                       Course Z←A
-                                                  </MenuItem>
-                                             </MenuList>
-                                        </>
-                                   )}
+                                                  Newest
+                                             </MenuItemOption>
+                                             <MenuItemOption
+                                                  value="desc"
+                                                  onClick={() =>
+                                                       setOrderby("desc")
+                                                  }
+                                             >
+                                                  Higest Rated
+                                             </MenuItemOption>
+                                             <MenuItemOption>
+                                                  Course A → Z
+                                             </MenuItemOption>
+                                             <MenuItemOption>
+                                                  Course Z ← A
+                                             </MenuItemOption>
+                                        </MenuOptionGroup>
+                                   </MenuList>
                               </Menu>
+                              {/* <Menu closeOnSelect={false}>
+                                   <MenuButton as={Button} colorScheme="blue">
+                                        MenuItem
+                                   </MenuButton>
+                                   <MenuList minWidth="240px">
+                                        <MenuOptionGroup
+                                             defaultValue="asc"
+                                             title="Order"
+                                             type="radio"
+                                        >
+                                             <MenuItemOption
+                                                  value="asc"
+                                                  onClick={() =>
+                                                       setOrderby("asc")
+                                                  }
+                                             >
+                                                  Ascending
+                                             </MenuItemOption>
+                                             <MenuItemOption value="desc">
+                                                  Descending
+                                             </MenuItemOption>
+                                        </MenuOptionGroup>
+                                        <MenuDivider />
+                                        <MenuOptionGroup
+                                             title="Country"
+                                             type="checkbox"
+                                        >
+                                             <MenuItemOption value="email">
+                                                  Email
+                                             </MenuItemOption>
+                                             <MenuItemOption value="phone">
+                                                  Phone
+                                             </MenuItemOption>
+                                             <MenuItemOption value="country">
+                                                  Country
+                                             </MenuItemOption>
+                                        </MenuOptionGroup>
+                                   </MenuList>
+                              </Menu> */}
                          </FormControl>
                     </VStack>
                </Box>

@@ -5,6 +5,7 @@ import WhyPluralsightCard from "../Components/WhyPluralsightCard";
 import CustomerSaying from "./CustomerSaying";
 import ToolsIcon from "./ToolsIcon";
 import ProservCard from "./ProservCard";
+import Faq from "../Components/Home/Faq";
 
 const Home = () => {
      return (
@@ -14,6 +15,7 @@ const Home = () => {
                <ProductsCard />
                <ProservCard />
                <ToolsIcon />
+               <Faq />
                <CustomerSaying />
           </>
      );

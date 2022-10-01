@@ -1,47 +1,33 @@
 import { StarIcon } from "@chakra-ui/icons";
-import { Badge, Box, color, Image } from "@chakra-ui/react";
-import { FaBeer, FcPositiveDynamic } from "react-icons/fa";
+import { Box } from "@chakra-ui/react";
 import { MdOutlineWatchLater, MdSignalCellularAlt } from "react-icons/md";
-function AirbnbCard() {
-     const property = {
-          imageUrl: "https://bit.ly/2Z4KKcF",
-          imageAlt: "Rear view of modern home with pool",
-          beds: 3,
-          baths: 2,
-          title: "Risk Assessment and Management",
-          formattedPrice: "by kevin Henry",
-          reviewCount: 34,
-          rating: 4,
-          im: "Intermediate",
-          time: new Date().getHours(),
-          min: new Date().getMinutes(),
-     };
+import { Link } from "react-router-dom";
+function AirbnbCard({ data }) {
+     const { author, duration, level, rating, rating_count, title } = data;
 
      return (
           <Box
-               m="100px auto"
-               maxW="600px"
-               borderWidth="1px"
-               borderRadius="lg"
+               w="90%"
+               borderBottom={"1px solid #ccc"}
                overflow="hidden"
                fontSize={25}
-               bg="black"
-               h="200px"
-               p="3"
+               margin="15px 0px"
+               bg="#181818"
+               h="140px"
                color={"white"}
           >
-               <Box p="6">
+               <Box>
                     <Box
                          mt="1"
-                         fontWeight="semibold"
-                         as="h4"
+                         fontWeight="bold"
                          lineHeight="tight"
+                         fontSize={"28px"}
                          noOfLines={1}
                     >
-                         {property.title}
+                         <Link to="/detailsPage">{title}</Link>
                     </Box>
 
-                    <Box>{property.formattedPrice}</Box>
+                    <Box>{`By ${author}`}</Box>
 
                     <Box display="flex" mt="2" gap={5} alignItems="center">
                          <Box
@@ -52,8 +38,7 @@ function AirbnbCard() {
                               color="#ccc"
                               fontSize="sm"
                          >
-                              {property.time}h{property.min}m{" "}
-                              <MdOutlineWatchLater />
+                              {duration} <MdOutlineWatchLater />
                          </Box>
                          <Box
                               width={"100px"}
@@ -63,7 +48,7 @@ function AirbnbCard() {
                               color="#ccc"
                               fontSize="sm"
                          >
-                              {property.im} <MdSignalCellularAlt />
+                              {level} <MdSignalCellularAlt />
                          </Box>
                          {Array(5)
                               .fill("")
@@ -77,7 +62,7 @@ function AirbnbCard() {
                                         <StarIcon
                                              key={i}
                                              color={
-                                                  i < property.rating
+                                                  i < rating
                                                        ? "#ffb600"
                                                        : "gray.300"
                                              }
@@ -85,7 +70,7 @@ function AirbnbCard() {
                                    </Box>
                               ))}
                          <Box color="gray.600" fontSize="sm">
-                              ( {property.reviewCount} )
+                              ( {rating_count} )
                          </Box>
                     </Box>
                </Box>
