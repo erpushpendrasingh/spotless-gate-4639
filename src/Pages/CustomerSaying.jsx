@@ -85,6 +85,7 @@ function Feature({
                               <Text mt={5}>{thomsonText}</Text>
                          </Box>
                     </Box>
+                   
                </HStack>
           </Box>
      );

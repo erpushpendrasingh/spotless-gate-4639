@@ -1,14 +1,7 @@
-import {
-     ArrowForwardIcon,
-     CloseIcon,
-     EmailIcon,
-     LockIcon,
-     StarIcon,
-} from "@chakra-ui/icons";
+import { LockIcon, StarIcon } from "@chakra-ui/icons";
 import {
      Container,
      Text,
-     HStack,
      VStack,
      Heading,
      Stack,
@@ -19,9 +12,6 @@ import {
      AccordionButton,
      AccordionIcon,
      AccordionPanel,
-     Radio,
-     Checkbox,
-     RadioGroup,
      Breadcrumb,
      BreadcrumbItem,
      BreadcrumbLink,
@@ -126,17 +116,12 @@ const Paragraph = () => {
                               </Box>
                          </Stack>
                          <Stack>
-                              <Box
-                                   mt={10}
-                                   fontSize={20}
-                                   fontWeight={"bold"}
-                                   color={"#fff"}
-                              >
+                              <Box mt={10} fontSize={18} color={"#fff"}>
                                    {property.whatLearn}
                               </Box>
                          </Stack>
                          <Stack>
-                              <VStack bg="#000" width={"100%"} textColor="#fff">
+                              <VStack width={"100%"} textColor="#fff">
                                    <Accordion
                                         allowMultiple
                                         w="100%"
@@ -144,20 +129,17 @@ const Paragraph = () => {
                                         // defaultIndex={[0, 1, 2]}
                                    >
                                         <AccordionItem w="100%">
-                                             <h1>
-                                                  <AccordionButton width="100%">
-                                                       <Box
-                                                            fontSize="25px"
-                                                            flex="1"
-                                                            textAlign="left"
-                                                       >
-                                                            Course Overview{" "}
-                                                            <br />
-                                                            1m
-                                                       </Box>
-                                                       <AccordionIcon />
-                                                  </AccordionButton>
-                                             </h1>
+                                             <AccordionButton width="100%">
+                                                  <Box
+                                                       fontSize="20px"
+                                                       flex="1"
+                                                       textAlign="left"
+                                                  >
+                                                       Course Overview <br />
+                                                       1m
+                                                  </Box>
+                                                  <AccordionIcon />
+                                             </AccordionButton>
                                              <Box
                                                   display="flex"
                                                   flexDirection="row"
@@ -190,7 +172,7 @@ const Paragraph = () => {
                                                             flex="1"
                                                             textAlign="left"
                                                             width={500}
-                                                            fontSize="25px"
+                                                            fontSize="20px"
                                                        >
                                                             Risk Frameworks -
                                                             ISO27005, 31000,
@@ -219,7 +201,6 @@ const Paragraph = () => {
                                                             }
                                                             // fontSize="22px"
                                                             fontSize="20px"
-                                                            border="1px solid red"
                                                        >
                                                             <Text
                                                                  mt={5}
@@ -300,7 +281,7 @@ const Paragraph = () => {
                                                             fontWeight={
                                                                  "normal"
                                                             }
-                                                            fontSize="25"
+                                                            fontSize="20px"
                                                             flex="1"
                                                             textAlign="left"
                                                        >
@@ -327,9 +308,7 @@ const Paragraph = () => {
                                                             fontWeight={
                                                                  "normal"
                                                             }
-                                                            // fontSize="22px"
                                                             fontSize="20px"
-                                                            border="1px solid red"
                                                        >
                                                             <Text
                                                                  mt={5}
@@ -362,25 +341,22 @@ const Paragraph = () => {
                                              </Box>
                                         </AccordionItem>
                                         <AccordionItem mt={"50px"} w="100%">
-                                             <h2>
-                                                  <AccordionButton
-                                                       fontWeight={"bold"}
-                                                       width="100%"
+                                             <AccordionButton
+                                                  fontWeight={"bold"}
+                                                  width="100%"
+                                             >
+                                                  <Box
+                                                       fontWeight={"normal"}
+                                                       fontSize="20px"
+                                                       flex="1"
+                                                       textAlign="left"
                                                   >
-                                                       <Box
-                                                            fontWeight={
-                                                                 "normal"
-                                                            }
-                                                            fontSize="25"
-                                                            flex="1"
-                                                            textAlign="left"
-                                                       >
-                                                            Assessing Risk{" "}
-                                                            <br /> 45mins
-                                                       </Box>
-                                                       <AccordionIcon />
-                                                  </AccordionButton>
-                                             </h2>
+                                                       Assessing Risk <br />{" "}
+                                                       45mins
+                                                  </Box>
+                                                  <AccordionIcon />
+                                             </AccordionButton>
+
                                              <Box
                                                   display="flex"
                                                   flexDirection="row"
@@ -400,7 +376,6 @@ const Paragraph = () => {
                                                             }
                                                             // fontSize="22px"
                                                             fontSize="20px"
-                                                            border="1px solid red"
                                                        >
                                                             <Text
                                                                  mt={5}
@@ -496,7 +471,7 @@ const Paragraph = () => {
                                                             fontWeight={
                                                                  "normal"
                                                             }
-                                                            fontSize="25"
+                                                            fontSize="20px"
                                                             flex="1"
                                                             textAlign="left"
                                                        >
@@ -523,9 +498,7 @@ const Paragraph = () => {
                                                             fontWeight={
                                                                  "normal"
                                                             }
-                                                            // fontSize="22px"
                                                             fontSize="20px"
-                                                            border="1px solid red"
                                                        >
                                                             <Text
                                                                  mt={5}
@@ -593,7 +566,7 @@ const Paragraph = () => {
                                                             fontWeight={
                                                                  "normal"
                                                             }
-                                                            fontSize="25"
+                                                            fontSize="20px"
                                                             flex="1"
                                                             textAlign="left"
                                                        >
@@ -622,7 +595,6 @@ const Paragraph = () => {
                                                             }
                                                             // fontSize="22px"
                                                             fontSize="20px"
-                                                            border="1px solid red"
                                                        >
                                                             <Text
                                                                  mt={5}

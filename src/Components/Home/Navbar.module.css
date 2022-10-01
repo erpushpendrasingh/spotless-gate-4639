@@ -1,9 +1,10 @@
 .active {
      text-decoration: none;
      color: white;
-     border-bottom: 10px solid #F04840;
+     border-bottom: 5px solid #F04840;
      font-size: 25px;
      font-weight: lighter;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .default {

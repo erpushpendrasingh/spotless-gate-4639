@@ -17,14 +17,14 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-const CourseAccordion = () => {
+const CourseAccordion = ({ setFilterBy }) => {
      return (
-          
-          <VStack bg="#000" width={500} textColor="#fff">
+          <VStack bg="#181818" width={500} textColor="#fff">
                <Accordion
                     allowMultiple
                     w="70%"
                     mt="50px"
+                    mb="50px"
                     defaultIndex={[0, 1, 2]}
                >
                     <AccordionItem w="100%">
@@ -55,28 +55,28 @@ const CourseAccordion = () => {
                                              <Radio
                                                   size="lg"
                                                   width={500}
-                                                  value="1"
+                                                  value=""
                                                   colorScheme="teal"
                                              >
                                                   All
                                              </Radio>
                                              <Radio
                                                   size="lg"
-                                                  value="10"
+                                                  value="core"
                                                   colorScheme="teal"
                                              >
                                                   Core courses
                                              </Radio>
                                              <Radio
                                                   size="lg"
-                                                  value="2"
+                                                  value="web"
                                                   colorScheme="teal"
                                              >
                                                   Expended courses
                                              </Radio>
                                              <Radio
                                                   size="lg"
-                                                  value="3"
+                                                  value="javascript"
                                                   colorScheme="teal"
                                              >
                                                   Labs
@@ -88,11 +88,7 @@ const CourseAccordion = () => {
                     </AccordionItem>
                     <AccordionItem w="100%">
                          <h2>
-                              <AccordionButton
-                                   //    width={400}
-                                   fontWeight={"bold"}
-                                   width="100%"
-                              >
+                              <AccordionButton fontWeight={"bold"} width="100%">
                                    <Box
                                         flex="1"
                                         textAlign="left"
@@ -112,17 +108,26 @@ const CourseAccordion = () => {
                                    fontWeight={"bold"}
                                    fontSize={25}
                               >
-                                   {/* <Radio
-                                        size="lg"
-                                        name="1"
-                                        colorScheme="teal"
-                                        defaultChecked
+                                   <Checkbox
+                                        isValid
+                                        onChange={() => setFilterBy("Advanced")}
                                    >
-                                       Advanced
-                                   </Radio> */}
-                                   <Checkbox isValid>Advanced</Checkbox>
-                                   <Checkbox isValid>Advanced</Checkbox>
-                                   <Checkbox isValid>Advanced</Checkbox>
+                                        Advanced
+                                   </Checkbox>
+                                   <Checkbox
+                                        isValid
+                                        onChange={() => setFilterBy("Beginner")}
+                                   >
+                                        Beginner
+                                   </Checkbox>
+                                   <Checkbox
+                                        isValid
+                                        onChange={() =>
+                                             setFilterBy("Intermediate")
+                                        }
+                                   >
+                                        Intermediate
+                                   </Checkbox>
                               </AccordionPanel>
                          </Box>
                     </AccordionItem>
@@ -175,12 +180,16 @@ const CourseAccordion = () => {
                     </AccordionItem>
                </Accordion>
                <Button
-                    mt={20}
-                    bg="black"
+                    // mt={"20px"}
+                    marginTop={"50px"}
+                    border="1px solid #fff"
+                    bg="#181818"
                     colorScheme={"blackAlpha"}
                     variant={"solid"}
-                    w={"100%"}
+                    w={"70%"}
                     size="lg"
+                    fontSize={"18px"}
+                    h="60px"
                >
                     <CloseIcon mr={5} /> Clear filter
                </Button>

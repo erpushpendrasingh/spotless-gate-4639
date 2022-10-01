@@ -12,9 +12,8 @@ import React from "react";
 function Feature({ url, desc, ...rest }) {
      return (
           <Box
-               margin={"100px auto"}
-               w="700px"
-               // bg={"black"}
+               margin={"auto"}
+               w="490px"
                backgroundImage={
                     "https://www.pluralsight.com/etc.clientlibs/pluralsight/clientlibs/clientlib-main/resources/images/paths-v2/paths-skill-iq-bkgd.png"
                }
@@ -23,12 +22,12 @@ function Feature({ url, desc, ...rest }) {
                borderLeft={"8px solid green"}
                {...rest}
           >
-               {/* <Heading fontSize="xl">{title}</Heading> */}
                <Box
                     display={"flex"}
                     flexDirection="column"
                     gap={5}
-                    p={10}
+                    py={10}
+                    pl={10}
                     margin="auto"
                >
                     <Image width="100px" src={url}></Image>
@@ -55,7 +54,7 @@ function Feature({ url, desc, ...rest }) {
 function SkillBox() {
      return (
           <HStack spacing={8}>
-               <VStack width={550}>
+               <VStack width={350}>
                     <Feature
                          url="https://www.pluralsight.com/etc.clientlibs/pluralsight/clientlibs/clientlib-main/resources/images/skill-iq-logo-white.png"
                          desc="Not sure where to start?"
