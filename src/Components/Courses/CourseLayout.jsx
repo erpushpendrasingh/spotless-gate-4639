@@ -27,7 +27,6 @@ const getUrl = (url, sort, orderBy, filterBy) => {
      return url;
 };
 const CourseLayout = () => {
-     //    const [value, setValue] = useState("");
      const [filteredResults, setFilteredResults] = useState([]);
      const [searchInput, setSearchInput] = useState("");
      let [searchParams, setSearchParams] = useSearchParams();
@@ -90,10 +89,9 @@ const CourseLayout = () => {
                />
                <Box w="100%" bg={"#181818"}>
                     <Box
-                         height={"500vh"}
+                         height={"240vh"}
                          bg={"#181818"}
                          display={"flex"}
-                         border={"1px solid red"}
                          w="90%"
                          gap={20}
                          m="auto"
@@ -133,7 +131,7 @@ const CourseLayout = () => {
                                    width="300px"
                               >
                                    <Button
-                                        fontSize={"40px"}
+                                        fontSize={"30px"}
                                         borderRadius={"50%"}
                                         width="50px"
                                         h="50px"
@@ -144,7 +142,7 @@ const CourseLayout = () => {
                                    </Button>
                                    <Button>{page}</Button>
                                    <Button
-                                        fontSize={"40px"}
+                                        fontSize={"30px"}
                                         borderRadius={"50%"}
                                         width="50px"
                                         h="50px"

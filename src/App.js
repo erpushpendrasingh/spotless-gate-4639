@@ -9,10 +9,11 @@ import AllRoutes from "./Components/AllRoutes";
 function App() {
      return (
           <>
-               {/* <Navbar /> */}
-               {/* <Header /> */}
-               {/* <AllRoutes /> */}
+               <Navbar />
+               <Header />
+               <AllRoutes />
                <Footer />
+               <h1>hello</h1>
           </>
      );
 }

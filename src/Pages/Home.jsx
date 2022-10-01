@@ -8,17 +8,17 @@ import ProservCard from "./ProservCard";
 import Faq from "../Components/Home/Faq";
 
 const Home = () => {
-     return (
-          <>
-               <MainPageFirstCard />
-               <WhyPluralsightCard />
-               <ProductsCard />
-               <ProservCard />
-               <ToolsIcon />
-               <Faq />
-               <CustomerSaying />
-          </>
-     );
+  return (
+    <>
+      <MainPageFirstCard />
+      <WhyPluralsightCard />
+      <ProductsCard />
+      <ProservCard />
+      <ToolsIcon />
+      <Faq />
+      <CustomerSaying />
+    </>
+  );
 };
 
 export default Home;

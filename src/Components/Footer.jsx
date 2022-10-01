@@ -19,19 +19,15 @@ import React from "react";
 
 const Footer = () => {
      return (
-          <Box margin={"auto"} bg="#202020" height={"500px"} p="40px">
+          <Box margin={"auto"} bg="#202020" height={"550px"} p="40px">
                <Grid
                     w="80%"
                     margin={"auto"}
                     templateColumns="repeat(5, 1fr)"
                     gap={6}
                >
-                    <GridItem margin={"auto"}>
-                         <Box
-                              spacing="20px"
-                              w="200px"
-                              // p={"10px"}
-                         >
+                    <GridItem>
+                         <Box spacing="20px" w="200px">
                               <Heading fontSize={"20px"} color="white">
                                    Support
                               </Heading>
@@ -96,7 +92,14 @@ const Footer = () => {
                          </Box>
                     </GridItem>
                     <GridItem>
-                         <Box w="400px" spacing="20px">
+                         <Box
+                              display={"flex"}
+                              flexDirection="column"
+                              justifyContent={"space-around"}
+                              height={"400px"}
+                              w="400px"
+                              p="20px"
+                         >
                               <Heading fontSize={"20px"} color="#CCCCC7">
                                    Newsletter
                               </Heading>
@@ -104,7 +107,7 @@ const Footer = () => {
                                    Sign up with your email to join our mailing
                                    list.
                               </Text>
-                              <FormControl m={"10px"}>
+                              <FormControl>
                                    <FormHelperText>
                                         Email Address*
                                    </FormHelperText>
@@ -126,7 +129,8 @@ const Footer = () => {
                               <Box
                                    display="flex"
                                    width={"200px"}
-                                   border="1px solid red"
+                                   alignItems={"center"}
+                                   margin="10px auto"
                                    justifyContent={"space-between"}
                                    h="30px"
                                    // paddingTop={20}
@@ -140,7 +144,13 @@ const Footer = () => {
                          </Box>
                     </GridItem>
                </Grid>
-               <Box border={"1px solid red"} color="white" display={"flex"} alignItems="center" justifyContent={"space-between"}>
+               <Box
+                    color="white"
+                    display={"flex"}
+                    alignItems="center"
+                    justifyContent={"space-between"}
+                    mt="10px"
+               >
                     <Image src="https://www.pluralsight.com/content/dam/logo/pluralsight-footer-logo-icon.png" />
                     <Text>
                          Copyright @2004-2022 pluralsight LLC.All rights

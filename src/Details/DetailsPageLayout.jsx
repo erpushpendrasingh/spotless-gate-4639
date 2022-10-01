@@ -4,25 +4,22 @@ import AboutTheAuthor from "./AboutTheAuthor";
 import DetailsPage from "./DetailsPage";
 import Paragraph from "./Paragraph";
 import ReadyToUpskill from "./ReadyToUpskill";
-import SkillBox from "./SkillBox";
 
 const DetailsPageLayout = () => {
      return (
           <>
-               <Box w="100%"  bg={"#181818"}>
+               <Box w="100%" h={"360vh"} bg={"#181818"}>
                     <Box
-                         border="1px solid green"
                          width={"90%"}
                          display="flex"
-                         //  alignItems={"center"}
                          flexDirection="row"
                          margin={"auto"}
                     >
-                         <Box w="70%" border="1px solid red">
+                         <Box w="70%">
                               <Paragraph />
                               <AboutTheAuthor />
                          </Box>
-                         <Box border="2px solid teal">
+                         <Box>
                               <DetailsPage />
                          </Box>
                     </Box>
