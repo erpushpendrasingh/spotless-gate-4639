@@ -1,7 +1,7 @@
 
-# Deccan Herald
+# Pluralsight
 
-Deccan Herald is an Indian English language daily newspaper published from the Indian state of Karnataka. It was founded by K. N. Guruswamy, a liquor businessman from Ballari and was launched on 17 June 1948
+Pluralsight, LLC is an American privately held online education company that offers a variety of video training courses for software developers, IT administrators, and creative professionals through its website.
 
 
 ## Deployment
