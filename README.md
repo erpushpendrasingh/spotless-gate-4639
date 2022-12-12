@@ -30,5 +30,5 @@ To deploy this project run
 
 ## Screenshots
 
-<img src="https://erpushpendrasingh.github.io/static/media/deccanherald.e5fe539575c325bd6bff.png" alt="image"/>
+<img src="https://erpushpendrasingh.github.io/static/media/pluralsight.db24f26a56b3abd9be01.png" alt="image"/>
 
